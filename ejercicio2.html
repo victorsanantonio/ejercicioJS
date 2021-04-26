@@ -4,17 +4,10 @@
 		<title>
 			Ejercicio2
 		</title>
+		<script src = "codigo_javascript.js"></script>
 	</head>
 	<body>
 		<script>
-			function invertirCadena(cadena){
-				let cadenaInvertida='';
-				for(let i=cadena.length-1; i>=0; --i){
-					cadenaInvertida+=cadena[i];
-				}
-				return cadenaInvertida;
-			}
-			
 			function palindromo(cadena){
 				//Invertir cadena
 				var cadenaInvertida = invertirCadena(cadena);
@@ -39,8 +32,6 @@
 					alert("NO es PALÍNDROMO");
 				}
 			}
-			
-			var cadena = prompt("Introduce una palabra para saber si es un palíndromo");
 			palindromo(cadena);
 		</script>
 	</body>
