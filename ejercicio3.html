@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Ejercicio 3
+		</title>
+	</head>
+	<body>
+		<form>
+			<fieldset>
+				<legend id="leyenda">
+					Ejercicio 3 Formulario
+				</legend>
+				<input type="button" id="btn_1" value="Botón 1" onclick="click_btn(id)">
+				<input type="button" id="btn_2" value="Botón 2" onclick="click_btn(id)">
+				<input type="button" id="btn_3" value="Botón 3" onclick="click_btn(id)">
+			</fieldset>
+		</form>
+		<script>
+			function click_btn(id){
+				if(id=="btn_1"){
+					document.getElementById("leyenda").innerHTML = "Has pulsado el botón 1";
+				}
+				if(id=="btn_2"){
+					document.getElementById("leyenda").innerHTML = "Has pulsado el botón 2";
+				}
+				if(id=="btn_3"){
+					document.getElementById("leyenda").innerHTML = "Has pulsado el botón 3";
+				}
+			}
+		</script>
+	</body>
+</html>
