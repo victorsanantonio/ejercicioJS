@@ -16,12 +16,27 @@
 			}
 			
 			function palindromo(cadena){
+				//Invertir cadena
 				var cadenaInvertida = invertirCadena(cadena);
+				
+				//Quitar espacios
+				cadenaInvertida = cadenaInvertida.replace(/ /g, "");
+				cadena = cadena.replace(/ /g, "");
+				
+				//Quitar tildes
+				cadenaInvertida = cadenaInvertida.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+				cadena = cadena.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+				
+				//Convertir a minúsculas
+				cadenaInvertida = cadenaInvertida.toLowerCase();
+				cadena = cadena.toLowerCase();
+				
+				
 				if(cadena==cadenaInvertida){
-					alert(cadena+" es  PALÍNDROMO");
+					alert("Es PALÍNDROMO");
 				}
 				else{
-					alert(cadena+" NO es PALÍNDROMO");
+					alert("NO es PALÍNDROMO");
 				}
 			}
 			
